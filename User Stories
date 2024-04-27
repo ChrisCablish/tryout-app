@@ -1,0 +1,70 @@
+**As a [type of user], I want [some goal] so that [some reason].**
+
+### User Stories for "Tryout" App
+
+#### Admin User Stories
+
+1. **Create Admin Account**
+
+   - As an admin, I want to be able to sign up for an admin account so that I can manage my ensemble's auditions.
+
+2. **Login to Admin Account**
+
+   - As an admin, I want to log in to my account so that I can access my admin functionalities.
+
+3. **Create Group**
+
+   - As an admin, I want to create a group for my ensemble, such as "Freedom Percussion," so that I can organize auditions and participants under this group, I am also able to create more than one group if I chose.
+
+4. **Pay subscription fee**
+
+   - As an admin, I want to pay the yearly, per group subscription fee so I can unlock the ability to
+     use the group I have created.
+
+5. **Manage Group**
+
+   - As an admin, I want to modify or delete an existing group so that I can manage my ensemble’s information accurately.
+
+6. **Invite Participants**
+   - As an admin, I want to send out invitations via email or social media that allow participants to register as either auditionees or adjudicators by using a group-specific ID.
+
+#### Adjudicator User Stories
+
+1. **Register as Adjudicator**
+
+   - As an adjudicator, I want to register using the link provided by the admin so that I can review and rate auditionees.
+
+2. **Login to Adjudicator Account**
+
+   - As an adjudicator, I want to log in to my account so that I can access my judging dashboard.
+
+3. **Review Auditionees**
+
+   - As an adjudicator, I want to scroll through the list of auditionees and access their profiles so that I can review their information and performance.
+
+4. **Rank and Leave Notes on Auditionees**
+   - As an adjudicator, I want to give rankings and leave notes on each auditionee’s performance so that I can provide feedback and make decisions on their audition results.
+
+#### Auditionee User Stories
+
+1. **Register as Auditionee**
+
+   - As an auditionee, I want to register using the link provided by the admin and enter the required group ID so that I can participate in auditions.
+
+2. **Login to Auditionee Account**
+
+   - As an auditionee, I want to log in to my account so that I can view my profile and audition results.
+
+3. **View Own Profile and Audition Results**
+   - As an auditionee, I want to view my own profile, including my personal information, audition ranking, and notes left by adjudicators, so that I can understand how I performed and what areas I need to improve.
+
+### General Functional User Stories
+
+1. **Reset Password**
+
+   - As a user (admin, adjudicator, auditionee), I want to reset my password if I forget it so that I can regain access to my account.
+
+2. **Update Profile**
+   - As a user, I want to update my profile information (like photo, email, name) so that I can keep my personal information current.
+
+These user stories cover the primary interactions expected within the "tryout" app, structured to help guide the development process. Each story should be prioritized and expanded into more detailed tasks as needed during the planning and development phases. If you need further elaboration on these stories or additional categories, let me know!
