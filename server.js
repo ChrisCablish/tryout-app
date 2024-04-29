@@ -23,7 +23,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-//defiing a passport strategy
+//defining a passport strategy
 
 const users = []; // This should eventually be a user database
 
