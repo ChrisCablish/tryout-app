@@ -16,12 +16,6 @@ module.exports = (sequelize, DataTypes) => {
     {
       tableName: "groups",
       underscored: true,
-      indexes: [
-        {
-          unique: true,
-          fields: ["publicGroupId"],
-        },
-      ],
     }
   );
 
