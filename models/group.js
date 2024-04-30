@@ -14,8 +14,14 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     {
-      tableName: "groups", // Ensure the table name is correctly pluralized or as you want it
-      underscored: true, // Ensures that auto-generated fields are snake_cased
+      tableName: "groups",
+      underscored: true,
+      indexes: [
+        {
+          unique: true,
+          fields: ["publicGroupId"],
+        },
+      ],
     }
   );
 
