@@ -1,3 +1,6 @@
+//Keeps track of what sections (if any) are affiliated with what groups.
+//Example: Orchestra group 1234567 has 4 sections - violin, viola, cello, bass
+
 module.exports = (sequelize, DataTypes) => {
   const GroupSection = sequelize.define(
     "GroupSection",
@@ -24,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
       underscored: true,
       indexes: [
         {
-          fields: ["groupId", "sectionId"],
+          fields: ["group_id", "section_Id"],
           unique: true, // Ensuring that each combination of groupId and sectionId is unique
         },
       ],

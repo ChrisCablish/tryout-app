@@ -40,13 +40,13 @@ module.exports = (sequelize, DataTypes) => {
       underscored: true,
       indexes: [
         {
-          fields: ["userId", "groupId"],
+          fields: ["user_id", "group_id"],
         },
         {
-          fields: ["noteId"],
+          fields: ["note_id"],
         },
         {
-          fields: ["authorId"],
+          fields: ["author_id"],
         },
       ],
     }

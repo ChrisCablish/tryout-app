@@ -1,3 +1,8 @@
+//Keeps track of user's strengths and weaknesses across groups.
+
+//Example entry: User johnsmith@email.com has the attribute "technique" applied to him as a strength
+// in the context of group 1234566
+
 module.exports = (sequelize, DataTypes) => {
   const UserGroupAttributes = sequelize.define(
     "UserGroupAttributes",
@@ -36,10 +41,10 @@ module.exports = (sequelize, DataTypes) => {
       underscored: true,
       indexes: [
         {
-          fields: ["userId", "groupId"],
+          fields: ["user_id", "group_id"],
         },
         {
-          fields: ["attributeId"],
+          fields: ["attribute_id"],
         },
       ],
     }
