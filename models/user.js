@@ -23,10 +23,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      section: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
     },
     {
       tableName: "users",
