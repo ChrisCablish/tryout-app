@@ -9,7 +9,7 @@ router.post("/signup", async (req, res) => {
   const { email, password, firstName, lastName } = req.body;
 
   try {
-    // Optional: Check if user already exists
+    // check if user already exists
     const existingUser = await User.findOne({ where: { email } });
     if (existingUser) {
       return res
@@ -23,7 +23,6 @@ router.post("/signup", async (req, res) => {
     // Create new user
     const newUser = await User.create({
       email,
-      password,
       firstName,
       lastName,
       password: hashedPassword,
@@ -36,6 +35,37 @@ router.post("/signup", async (req, res) => {
     res
       .status(500)
       .send({ message: "Failed to register user", error: error.message });
+  }
+});
+
+// POST /login route for user login
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const user = await User.findOne({ where: { email } });
+    if (!user) {
+      return res.status(401).send({ message: "Login failed: User not found" });
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res
+        .status(401)
+        .send({ message: "Login failed: Incorrect password" });
+    }
+
+    // Assuming session middleware is set up
+    req.session.userId = user.id; // Save user id in the session
+    res
+      .status(200)
+      .json({
+        message: "Logged in successfully",
+        user: { id: user.id, email: user.email },
+      });
+  } catch (error) {
+    console.error("Login error:", error);
+    res.status(500).send({ message: "Failed to log in", error: error.message });
   }
 });
 
