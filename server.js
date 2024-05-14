@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+var cors = require("cors");
 const PORT = process.env.PORT || 3001; // Use environment variable or default
 const session = require("express-session");
 const passport = require("passport");
@@ -20,6 +21,9 @@ app.use(
     saveUninitialized: false,
   })
 );
+
+//cors policy
+app.use(cors());
 
 // Passport initialization
 app.use(passport.initialize());
